@@ -12,7 +12,7 @@ exports.config = {
   output: './output',
   helpers: {
     Playwright: {
-      browser: 'chromium',
+      browser: 'firefox',
       url: 'http://www.oranum.com',
       show: true
     },
