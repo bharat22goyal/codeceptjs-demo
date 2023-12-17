@@ -4,18 +4,22 @@ Scenario('live page buttons triggers signup overlay',  async ({ I }) => {
     const cssForCloseButton = '.mc_js_login_or_signup .mc_dialog__close';
     const cssForSignUpButton = '[data-testid=joinNowButtonApplet]';
 
-    I.amOnPage('chat/PetraPrimeLight#!/');
-    I.waitForElement('[data-id=buyCreditIcon]', 5);
+    I.amOnPage('/');
+    I.click("(//*[contains(@class, 'thumb-link')])[1]") //clicks first link on live page
+    I.waitForElement('#mc_btn_start_private', 5);
+
+    I.see('LIVE','[data-testid=badgeLive]') //check if the presenter is live
 
     const clickAndCheck = async (selector) => {
         I.click(selector);
-        I.seeElement(cssForSignUpButton);
+        I.see('Join Now',cssForSignUpButton); //check signup overlay
         I.click(cssForCloseButton);
     };
 
-    await clickAndCheck('[data-id=buyCreditIcon]');
-    await clickAndCheck('.mc_heart_anim_container');
-    await clickAndCheck('[data-id=surpriseIcon]');
-    await clickAndCheck('#mc_btn_start_private');
-    await clickAndCheck('.mc_icon--credits');
+    await clickAndCheck('#mc_btn_start_private');    //start session button
+    await clickAndCheck('[data-id=buyCreditIcon]');  //credits button
+    await clickAndCheck('.mc_heart_anim_container'); //add to favourites
+    await clickAndCheck('[data-id=surpriseIcon]');   //surprise button
+    await clickAndCheck('#mc_btn_start_private');    //start session button
+    await clickAndCheck('.mc_icon--credits');        //get coins button
 });

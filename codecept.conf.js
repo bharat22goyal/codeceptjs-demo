@@ -14,7 +14,7 @@ exports.config = {
     Playwright: {
       browser: 'firefox',
       url: 'http://www.oranum.com',
-      show: true
+      show: false
     },
     "ChaiWrapper": {
       "require": "codeceptjs-chai"

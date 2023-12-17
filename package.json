@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "allure-codeceptjs": "^2.10.0",
     "codeceptjs": "^3.5.10",
     "playwright": "^1.40.1"
   },
