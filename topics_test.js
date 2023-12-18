@@ -12,4 +12,6 @@ Data(['Astrology','Tarot','Clairvoyance','Dream interpretation','Healing'
     searchResults.forEach((text) => {
         I.assertContain(text,current);
     });
+
+    //TODO - no duplicates are present
 });

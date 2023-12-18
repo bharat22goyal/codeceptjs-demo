@@ -18,6 +18,11 @@ exports.config = {
     },
     "ChaiWrapper": {
       "require": "codeceptjs-chai"
+    },
+  },
+  "mocha": {
+    "reporterOptions": {
+        "reportDir": "output"
     }
   },
   include: {
