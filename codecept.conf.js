@@ -8,13 +8,13 @@ setCommonPlugins();
 
 /** @type {CodeceptJS.MainConfig} */
 exports.config = {
-  tests: './*_test.js',
+  tests: './tests/**/*_test.js',
   output: './output',
   helpers: {
     Playwright: {
       browser: 'firefox',
       url: 'http://www.oranum.com',
-      show: false
+      show: false 
     },
     "ChaiWrapper": {
       "require": "codeceptjs-chai"
