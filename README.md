@@ -6,7 +6,7 @@ Run tests on docker environment
 
 3. Run tests: docker run -it --rm -v $PWD:/app codeceptjs
 
-Run tests on local env: 
+Run tests on local env (with reports) : 
 1. Install dependencies : npm install
 
 2. npx codeceptjs run --reporter mochawesome
