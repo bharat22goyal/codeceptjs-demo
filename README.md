@@ -9,4 +9,4 @@ Run tests on docker environment
 Run tests on local env: 
 1. Install dependencies : npm install
 
-2. npx codeceptjs run "tests/" --reporter mochawesome
+2. npx codeceptjs run --reporter mochawesome
