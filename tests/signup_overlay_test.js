@@ -1,4 +1,4 @@
-Feature('signup_overalay');
+Feature('signup_overlay');
 
 Scenario('live page buttons triggers signup overlay',  async ({ I }) => {
     const cssForCloseButton = '.mc_js_login_or_signup .mc_dialog__close';

@@ -8,10 +8,16 @@ Data(['Astrology','Tarot','Clairvoyance','Dream interpretation','Healing'
     I.amOnPage('/');
     I.click(current);
     I.scrollPageToBottom();
-    const searchResults = await I.grabTextFromAll('[data-type="performer"] .thumb-data-willingness-list')
-    searchResults.forEach((text) => {
+    
+    const topicResults = await I.grabTextFromAll('[data-type="performer"] .thumb-data-willingness-list')
+    
+    //topic results show matching content
+    topicResults.forEach((text) => {
         I.assertContain(text,current);
     });
 
-    //TODO - no duplicates are present
+    const performerNames = await I.grabTextFromAll('[data-type="performer"] .thumb-data-item--name')
+
+    //no duplicates are present
+    assert.ok(I.checkIfResultContainsDuplicates(performerNames));
 });
